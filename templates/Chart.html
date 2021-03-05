@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width="device-width", initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+
+    <body>
+        <canvas width="800" height="200" id="myChart1"></canvas>
+        <canvas width="800" height="200" id="myChart2"></canvas>
+        <canvas width="800" height="200" id="myChart3"></canvas>
+        <canvas width="800" height="200" id="myChart4"></canvas>
+        <canvas width="800" height="200" id="myChart5"></canvas>
+        <canvas width="800" height="200" id="myChart6"></canvas>
+
+    </body>
+
+    <script>
+            var ctx = document.getElementById('myChart1').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{list_t|safe}},
+                datasets: [
+                    {
+                label: 'alpha-7',
+                data: {{list_a7|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(254,97,132,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    },
+                    {
+                label: 'beta-7',
+                data: {{list_b7|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(97,132,254,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    }
+                ]
+            }
+    });
+
+    var ctx = document.getElementById('myChart2').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{list_t|safe}},
+                datasets: [
+                    {
+                label: 'alpha-8',
+                data: {{list_a8|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(254,97,132,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    },
+                    {
+                label: 'beta-8',
+                data: {{list_b8|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(97,132,254,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    }
+
+                ]
+            }
+    });
+
+    var ctx = document.getElementById('myChart3').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{list_t|safe}},
+                datasets: [
+                    {
+                label: 'alpha-beta-7',
+                data: {{list_gap7|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(254,97,132,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    },
+                ]
+            }
+    });
+
+    var ctx = document.getElementById('myChart4').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{list_t|safe}},
+                datasets: [
+                    {
+                label: 'alpha-beta-8',
+                data: {{list_gap8|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(254,97,132,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    },
+                ]
+            }
+    });
+
+    var ctx = document.getElementById('myChart5').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{list_t|safe}},
+                datasets: [
+                    {
+                label: 'gamma-8',
+                data: {{list_g7|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(254,97,132,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    },
+                ]
+            }
+    });
+
+    var ctx = document.getElementById('myChart6').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{list_t|safe}},
+                datasets: [
+                    {
+                label: 'gamma-8',
+                data: {{list_g8|safe}},
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                borderColor : "rgba(254,97,132,0.5)",
+                borderWidth: 1,
+                pointRadius: 1,
+                lineTension: 0
+                    },
+                ]
+            }
+    });
+        </script>
+</html>
